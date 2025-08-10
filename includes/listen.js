@@ -26,7 +26,7 @@ module.exports = function ({ api, models }) {
                     const checktt = JSON.parse(fs.readFileSync(checkttDataPath + checkttFile));
                     let storage = [], count = 1;
                     for (const item of checktt.day) {
-                        const userName = await Users.getNameUser(item.id) || 'Priyansh Rajput';
+                        const userName = await Users.getNameUser(item.id) || 'LEGEND BOY AKKU';
                         const itemToPush = item;
                         itemToPush.name = userName;
                         storage.push(itemToPush);
@@ -41,7 +41,7 @@ module.exports = function ({ api, models }) {
                             return a.name.localeCompare(b.name);
                         }
                     });
-                    let checkttBody = '==PRIYANSH RAJPUT ❤️==\n\n';
+                    let checkttBody = '==LEGEND BOY AKKU ❤️==\n\n';
                     checkttBody += storage.slice(0, 10).map(item => {
                         return `${count++}. ${item.name} with ${item.count} message`;
                     }).join('\n');
@@ -63,7 +63,7 @@ module.exports = function ({ api, models }) {
                         const checktt = JSON.parse(fs.readFileSync(checkttDataPath + checkttFile));
                         let storage = [], count = 1;
                         for (const item of checktt.week) {
-                            const userName = await Users.getNameUser(item.id) || 'Priyansh Hun Yar';
+                            const userName = await Users.getNameUser(item.id) || 'Akku Hun Yar';
                             const itemToPush = item;
                             itemToPush.name = userName;
                             storage.push(itemToPush);
@@ -78,7 +78,7 @@ module.exports = function ({ api, models }) {
                                 return a.name.localeCompare(b.name);
                             }
                         });
-                        let checkttBody = '==PRIYANSH RAJPUT ❤️==\n\n';
+                        let checkttBody = '==LEGEND BOY AKKU ❤️==\n\n';
                         checkttBody += storage.slice(0, 10).map(item => {
                             return `${count++}. ${item.name} with ${item.count} message`;
                         }).join('\n');
@@ -103,7 +103,7 @@ module.exports = function ({ api, models }) {
     (async function () {
 
         try {
-            logger(global.getText('listen', 'startLoadEnvironment'), '[ Priyansh Rajput ]');
+            logger(global.getText('listen', 'startLoadEnvironment'), '[ LEGEND BOY AKKU ]');
             let threads = await Threads.getAll(),
                 users = await Users.getAll(['userID', 'name', 'data']),
                 currencies = await Currencies.getAll(['userID']);
@@ -135,12 +135,12 @@ module.exports = function ({ api, models }) {
                     global['data']['commandBanned']['set'](idUsers, dataU['data']['commandBanned']);
             }
             for (const dataC of currencies) global.data.allCurrenciesID.push(String(dataC['userID']));
-            logger.loader(global.getText('listen', 'loadedEnvironmentUser')), logger(global.getText('listen', 'successLoadEnvironment'), '[ Priyansh ]');
+            logger.loader(global.getText('listen', 'loadedEnvironmentUser')), logger(global.getText('listen', 'successLoadEnvironment'), '[ AKKU ]');
         } catch (error) {
             return logger.loader(global.getText('listen', 'failLoadEnvironment', error), 'error');
         }
     }());
-    logger(`[ ${global.config.PREFIX} ] • ${(!global.config.BOTNAME) ? "" : global.config.BOTNAME}`, "[ Priyansh Rajput ]");
+    logger(`[ ${global.config.PREFIX} ] • ${(!global.config.BOTNAME) ? "" : global.config.BOTNAME}`, "[ LEGEND BOY AKKU ]");
 
     ///////////////////////////////////////////////
     //========= Require all handle need =========//
