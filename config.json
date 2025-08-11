@@ -16,13 +16,14 @@
     "EMAIL": "",
     "PASSWORD": "",
     "OTPKEY": "",
-    "BOTNAME": "LEGEND BOY AKKU",
+    "BOTNAME": "LUND",
     "PREFIX": "/",
     "ADMINBOT": [
-        "100053049497451"
+        "100053049497451" , "61578937649198"
+        
     ],
     "NDH": [
-        "100053049497451"
+        "100053049497451" , "61578937649198"
     ],
     "DATABASE": {
         "sqlite": {
